@@ -1,9 +1,9 @@
-Project Overview: Semantic Search Application
+Semantic Search Application
 
-1. Objective
+Objective
    The main goal of this project is to build a semantic search application that allows users to upload text-based documents (like PDFs or TXT files) and perform natural language searches on them. Unlike traditional keyword searches, the application aims to return results based on the meaning or intent behind the search query, leveraging modern machine learning techniques for better accuracy and relevance.
 
-2. Architecture
+Architecture
    The project is structured into two main components:
 
 Backend:
@@ -16,13 +16,13 @@ Frontend:
 A user-friendly web interface for users to upload documents, input search queries, and view results.
 Developed using React, a popular JavaScript library for building user interfaces.
 
-3. Key Features
+Key Features
    Document Upload: Users can upload multiple text-based documents.
    Natural Language Search: Users can enter natural language queries to search the documents.
    Semantic Similarity: Results are ranked based on semantic relevance rather than just keyword matching.
    Responsive Design: The frontend is designed to be intuitive and user-friendly.
 
-4. Technologies Used
+Technologies Used
    FastAPI: For building the backend API.
    Uvicorn: ASGI server for running the FastAPI application.
    SQLAlchemy: For interacting with the database.
@@ -31,7 +31,7 @@ Developed using React, a popular JavaScript library for building user interfaces
    Material-UI: A popular React UI framework to enhance the frontend design.
    pdfplumber: For extracting text from PDF files.
 
-5. How It Works
+How It Works
    Document Upload:
 
 Users upload documents through the React frontend.
@@ -53,7 +53,7 @@ Displaying Results:
 
 The frontend displays the ranked search results to the user, showing relevant document names and their similarity scores.
 
-6. User Experience
+User Experience
    Responsive UI: The React frontend uses Material-UI to create a visually appealing and responsive user interface.
    Feedback Mechanism: After uploading a document, users receive immediate feedback through Snackbar notifications.
    Simple Interaction: Users can easily switch between uploading documents and searching queries, with clear labels and buttons.
