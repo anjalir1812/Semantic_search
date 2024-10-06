@@ -1,9 +1,9 @@
-Semantic Search Application
+#Semantic Search Application
 
-Objective
+###Objective
    The main goal of this project is to build a semantic search application that allows users to upload text-based documents (like PDFs or TXT files) and perform natural language searches on them. Unlike traditional keyword searches, the application aims to return results based on the meaning or intent behind the search query, leveraging modern machine learning techniques for better accuracy and relevance.
 
-Architecture
+###Architecture
    The project is structured into two main components:
 
 Backend:
@@ -16,7 +16,7 @@ Frontend:
 A user-friendly web interface for users to upload documents, input search queries, and view results.
 Developed using React, a popular JavaScript library for building user interfaces.
 
-Key Features
+###Key Features
    Document Upload: Users can upload multiple text-based documents.
    Natural Language Search: Users can enter natural language queries to search the documents.
    Semantic Similarity: Results are ranked based on semantic relevance rather than just keyword matching.
@@ -31,12 +31,13 @@ Technologies Used
    Material-UI: A popular React UI framework to enhance the frontend design.
    pdfplumber: For extracting text from PDF files.
 
-How It Works
+###How It Works
    Document Upload:
 
 Users upload documents through the React frontend.
 The uploaded files are sent to the FastAPI backend via a POST request.
-Text Extraction:
+
+###Text Extraction:
 
 The backend extracts text content from the uploaded documents using pdfplumber for PDFs and handles TXT files directly.
 If the document is scanned, Optical Character Recognition (OCR) can be implemented using tools like Tesseract.
@@ -44,16 +45,18 @@ Embedding Generation:
 
 Once the text is extracted, the backend uses a pre-trained model from the sentence-transformers library to generate vector embeddings of the document content.
 These embeddings are stored in a PostgreSQL database along with the document's metadata (like filename).
-Search Functionality:
+
+###Search Functionality:
 
 When a user enters a search query, the backend generates an embedding for the query as well.
 The application retrieves all document embeddings from the database and computes their similarity to the query embedding using cosine similarity.
 The top results (most similar documents) are then returned to the frontend.
-Displaying Results:
+
+###Displaying Results:
 
 The frontend displays the ranked search results to the user, showing relevant document names and their similarity scores.
 
-User Experience
+###User Experience
    Responsive UI: The React frontend uses Material-UI to create a visually appealing and responsive user interface.
    Feedback Mechanism: After uploading a document, users receive immediate feedback through Snackbar notifications.
    Simple Interaction: Users can easily switch between uploading documents and searching queries, with clear labels and buttons.
